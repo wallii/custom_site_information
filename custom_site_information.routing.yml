@@ -1,0 +1,10 @@
+custom_site_information.get_dailyhunt:
+  path: '/page_json/{apikey}/{nodeid}'
+  defaults:
+   _controller: '\Drupal\custom_site_information\Controller\customRestController::getData'
+   apikey: 'apikey'
+   nodeid: 'nodeid'
+  methods:  [GET] 
+  requirements:
+   _custom_access: \Drupal\custom_site_information\Controller\customRestController::access 
+   
